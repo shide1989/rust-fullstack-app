@@ -35,7 +35,7 @@ Insertable,
 Identifiable,
 AsChangeset,
 )]
-#[diesel(table_name=todos)]
+#[diesel(table_name = todos)]
 pub struct Todo {
     pub id: ID,
     pub text: String,
@@ -45,7 +45,7 @@ pub struct Todo {
 
 #[tsync::tsync]
 #[derive(Debug, Serialize, Deserialize, Clone, Insertable, AsChangeset)]
-#[diesel(table_name=todos)]
+#[diesel(table_name = todos)]
 pub struct TodoChangeset {
     pub text: String,
 }

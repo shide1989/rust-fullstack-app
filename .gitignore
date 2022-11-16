@@ -1,7 +1,9 @@
 /frontend/dist
+/frontend/src/types/rust.d.ts
 /.cargo/.build
 .env*
 !.env.example
 build-log*.txt
 .DS_Store
 /.idea/
+/backend/schema.rs

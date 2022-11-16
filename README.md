@@ -7,6 +7,7 @@ This project was bootstrapped with [Create Rust App](https://github.com/wulf/cre
 - rustup, (Archlinux: `pacman -S rustup`)
 - Rust stable, (bash: `rustup toolchain install stable`)
 - Diesel CLI (after rust is installed: `cargo install diesel_cli`)
+- Tsync (after rust is installed: `cargo install tsync`)
 
 - Other helpful tools
 

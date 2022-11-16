@@ -50,7 +50,7 @@ const DevBoxItem = (props: {
       <div>{props.children}</div>
       <div style={{ display: 'flex' }}>
         {props.actions?.map((action) => (
-          <button onClick={() => action.fn()}>{action.label}</button>
+          <button key={action.label} onClick={() => action.fn()}>{action.label}</button>
         ))}
       </div>
     </div>

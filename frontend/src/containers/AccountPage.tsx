@@ -81,7 +81,7 @@ export const AccountPage = () => {
   }
 
   useEffect(() => {
-    fetchSessions()
+    fetchSessions().catch(console.error)
   }, [auth.isAuthenticated, page, pageSize])
 
   const changePassword = async () => {

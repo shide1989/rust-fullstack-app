@@ -80,13 +80,13 @@ async fn create(db: Data<Database>, store: Data<Storage>, mut payload: Multipart
 
                 let attached_req = Attachment::attach(&mut db, &store, "file".to_string(), "NULL".to_string(), 0, AttachmentData {
                     data,
-                    file_name
+                    file_name,
                 }, true, false).await;
 
                 if attached_req.is_err() {
                     return HttpResponse::InternalServerError().json(attached_req.err().unwrap());
                 }
-            },
+            }
             _ => {}
         }
     }
