@@ -1,0 +1,14 @@
+services:
+  fullstack:
+    build:
+        dockerfile: ./Dockerfile
+        context: .
+    ports:
+      - 3000:3000
+    env_file: .env
+    networks:
+      - backend
+networks:
+  backend:
+    external: true
+    name: docker_backend

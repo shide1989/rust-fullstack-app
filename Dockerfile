@@ -1,4 +1,4 @@
-FROM rust:1.54
+FROM rust:1.65
 
 RUN apt-get update -y
 RUN apt-get install -y nodejs npm
@@ -15,8 +15,11 @@ RUN rustup default nightly;
 WORKDIR /app
 COPY . .
 
-RUN cargo build --release
+#RUN cargo build --release
 
 EXPOSE 3000
+#FROM dev
+CMD ["cargo", "fullstack"]
 
-CMD ["cargo", "run", "--release"]
+#FROM release
+#CMD ["cargo", "run", "--release"]
